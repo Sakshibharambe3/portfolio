@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakshi Bharambe | MS CS @ USC</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%238B6A42'/><text x='50' y='68' font-size='52' font-family='serif' fill='white' text-anchor='middle'>SB</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────── -->
+  <nav>
+    <a href="#" class="nav-logo" onclick="closeMenu()">SB</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"      onclick="closeMenu()">About</a></li>
+      <li><a href="#education"  onclick="closeMenu()">Education</a></li>
+      <!-- <li><a href="#skills"     onclick="closeMenu()">Skills</a></li> -->
+      <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+      <li><a href="#projects"   onclick="closeMenu()">Projects</a></li>
+      <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+      <li><a href="#contact"    onclick="closeMenu()">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun" id="themeIcon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-grain"></div>
+    <p class="hero-eyebrow">Hello, I'm</p>
+    <h1 class="hero-name">Sakshi <span>Bharambe</span></h1>
+    <p class="hero-tagline">
+      MS Computer Science @ USC &nbsp;·&nbsp;
+      <span class="hero-typed" id="typed"></span>
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">Explore My Work</a>
+      <a href="#contact"  class="btn btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <img src="profile.png" alt="Sakshi Bharambe" class="photo-placeholder">
+      </div>
+      <div class="about-text reveal">
+        <h2 class="section-title reveal">About <span>Me</span></h2>
+        <p>
+          I am a Master's graduate in Computer Science from the University of Southern California (May 2026), passionate about building software that combines intelligent technology with practical solutions. My work focuses on designing and developing scalable software, leveraging AI and data to solve complex challenges, and creating applications that deliver meaningful user experiences.
+        </p>
+        <p>
+          My experience spans software development, automation, full-stack web development, and data-driven applications across industry and academic projects. At Leap Analytics, I contributed to web development and automation initiatives, while at USC Transportation, I build scalable software and automation tools that streamline operations and improve efficiency. Driven by curiosity and continuous learning, I strive to build technology that is scalable, impactful, and designed to solve real-world problems.
+        </p>
+        <a href="resume.pdf" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; padding: 0.5rem 1rem; font-size: 0.9rem; min-width: 150px; justify-content: center;">
+          Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ──────────────────────────────────────────── -->
+  <section id="education">
+    <p class="section-label reveal">Academic Background</p>
+    <h2 class="section-title reveal">My <span>Education</span></h2>
+    <div class="edu-grid">
+
+      <div class="edu-card reveal">
+                <div class="edu-school">University of Southern California</div>
+        <div class="edu-degree">Master of Science in Computer Science</div>
+        <div class="edu-period">August 2024 – May 2026 &nbsp;·&nbsp; Los Angeles, CA</div>
+        <div class="edu-courses">
+          <strong>Coursework:</strong> Analysis of Algorithms, Web Technologies, Multimodal Learning, Applied NLP,
+          Information Retrieval &amp; Web Search, Deep Learning, Database Systems, Research Methods
+        </div>
+      </div>
+
+      <div class="edu-card reveal">
+                <div class="edu-school">Terna Engineering College, University of Mumbai</div>
+        <div class="edu-degree">Bachelor of Engineering in Computer Engineering</div>
+        <div class="edu-period">August 2019 – June 2023 &nbsp;·&nbsp; Mumbai, India</div>
+        <div class="edu-courses">
+          <strong>Coursework:</strong> Artificial Intelligence, Machine Learning, Applied Data Science,
+          Big Data Analytics, Software Engineering, Data Structures, Computer Networks
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS ────────────────────────────────────────────── -->
+  <!-- <section id="skills">
+    <p class="section-label reveal">What I Know</p>
+    <h2 class="section-title reveal">Skills &amp; <span>Technologies</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="fa-solid fa-code" style="margin-right:0.4rem"></i>Programming</div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span>
+          <span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">PHP</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="fa-solid fa-globe" style="margin-right:0.4rem"></i>Web Development</div>
+        <div class="tags">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">React</span>
+          <span class="tag">MySQL</span><span class="tag">Bootstrap</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="fa-solid fa-brain" style="margin-right:0.4rem"></i>AI &amp; Machine Learning</div>
+        <div class="tags">
+          <span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">OpenCV</span>
+          <span class="tag">NLP</span><span class="tag">CNN</span><span class="tag">XGBoost</span>
+          <span class="tag">Sklearn</span><span class="tag">NLTK</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="fa-solid fa-chart-bar" style="margin-right:0.4rem"></i>Data &amp; Analytics</div>
+        <div class="tags">
+          <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span>
+          <span class="tag">Selenium</span><span class="tag">MediaPipe</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="fa-solid fa-screwdriver-wrench" style="margin-right:0.4rem"></i>Tools &amp; Platforms</div>
+        <div class="tags">
+          <span class="tag">VS Code</span><span class="tag">Jupyter</span><span class="tag">Google Colab</span>
+          <span class="tag">PyCharm</span><span class="tag">Webflow</span><span class="tag">Azure AD</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-title"><i class="fa-solid fa-people-group" style="margin-right:0.4rem"></i>Interpersonal</div>
+        <div class="tags">
+          <span class="tag">Leadership</span><span class="tag">Teamwork</span><span class="tag">Problem-Solving</span>
+          <span class="tag">Communication</span>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ── EXPERIENCE ────────────────────────────────────────── -->
+  <section id="experience">
+    <p class="section-label reveal">Where I've Worked</p>
+    <h2 class="section-title reveal">Work <span>Experience</span></h2>
+    <div class="exp-wrapper">
+      <button class="scroll-btn left" onclick="scrollExp(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="timeline-track"></div>
+      <div class="timeline-scroll" id="expScroll">
+
+      <div class="exp-card reveal">
+        <div class="tl-company">USC Transportation · California, USA</div>
+        <div class="tl-role">Software Developer</div>
+        <div class="tl-date">September 2024 – May 2026</div>
+        <ul class="tl-points">
+          <li>Built automation tools and Python-based workflows that eliminated repetitive manual processes and improved operational efficiency</li>
+          <li>Designed scalable web scraping and data processing pipelines with multithreaded execution, logging, and error handling to enhance reliability</li>
+          <li>Integrated enterprise notification systems using Azure AD and Outlook APIs, enabling real-time communication across transportation operations</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="tl-company">Leap Analytics · California, USA</div>
+        <div class="tl-role">Software Engineer Intern</div>
+        <div class="tl-date">May 2025 – August 2025</div>
+        <ul class="tl-points">
+          <li>Enhanced and maintained client-facing web applications by improving UI components, responsiveness, and overall user experience</li>
+          <li>Developed automated web scraping pipelines to collect structured data from multiple sources, accelerating data acquisition</li>
+          <li>Analyzed and visualized datasets to generate business insights and support data-driven decision making</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="tl-company">Blend Vidya · Mumbai, India</div>
+        <div class="tl-role">Artificial Intelligence Intern</div>
+        <div class="tl-date">January 2023 – June 2023</div>
+        <ul class="tl-points">
+          <li>Built AI-driven data analysis and visualization tools to uncover student engagement patterns and improve learning outcomes</li>
+          <li>Developed intelligent analytics solutions using machine learning techniques to support personalized recommendations</li>
+          <li>Collaborated with a team to design predictive models that enhanced student engagement through data-driven insights</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="tl-company">Verzeo · Mumbai, India</div>        
+        <div class="tl-role">Machine Learning Intern</div>        
+        <div class="tl-date">June 2021 – December 2021</div>
+        <ul class="tl-points">
+          <li>Built end-to-end machine learning pipelines for regression, classification, and clustering using Scikit-learn, XGBoost, and K-Means</li>
+          <li>Automated data preprocessing, feature engineering, and hyperparameter optimization to streamline model development and improve performance</li>
+          <li>Developed and deployed machine learning models using Flask APIs, enabling real-time inference and seamless integration with web applications</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="timeline-track-bottom"></div>
+      <button class="scroll-btn right" onclick="scrollExp(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────────── -->
+  <section id="projects">
+    <p class="section-label reveal">What I've Built</p>
+    <h2 class="section-title reveal">Projects</h2>
+    <p class="section-sub reveal">Tap a card to explore</p>
+    <div class="projects-grid">
+
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="project-title">Gesture Controlled Virtual Mouse</div>
+          </div>
+          <div class="flip-back">
+            <div class="project-title">Gesture Controlled Virtual Mouse</div>
+            <p class="project-desc">AI-powered human-computer interaction system that combines computer vision and voice recognition to enable touch-free computer control. Built using OpenCV and MediaPipe, the application achieves 98% gesture recognition accuracy while supporting intuitive gesture- and voice-based interactions.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">OpenCV</span>
+              <span class="stack-tag">MediaPipe</span>
+              <span class="stack-tag">Computer Vision</span><span class="stack-tag">Speech Recognition</span><span class="stack-tag">Human-Computer Interaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="project-title">Spam Mail Prediction</div>
+          </div>
+          <div class="flip-back">
+            <div class="project-title">Spam Mail Prediction</div>
+            <p class="project-desc">Machine learning-based email classification system that automatically identifies spam and legitimate emails using natural language processing. Built using Logistic Regression and Scikit-learn, the application performs text preprocessing, feature extraction with CountVectorizer, and predictive modeling to deliver accurate and efficient spam detection.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Machine Learning</span>
+              <span class="stack-tag">Scikit-learn</span><span class="stack-tag">Logistic Regression</span>
+              <span class="stack-tag">NLP</span>
+              <span class="stack-tag">Pandas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="project-title">E-commerce Electronics Website</div>
+          </div>
+          <div class="flip-back">
+            <div class="project-title">E-commerce Electronics Website</div>
+            <p class="project-desc">Full-stack e-commerce web application that allows users to browse electronic products, manage shopping carts, and complete secure online purchases. Built using HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap, the platform features user authentication, category-based product browsing, cart management, and online payment integration for a seamless shopping experience.</p>
+            <div class="project-stack">
+              <span class="stack-tag">HTML</span>
+              <span class="stack-tag">CSS</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="project-title">QueryBot</div>
+          </div>
+          <div class="flip-back">
+            <div class="project-title">QueryBot</div>
+            <p class="project-desc">Natural language to SQL (Text-to-SQL) system that translates user queries into executable SQL across diverse database schemas. Built using transformer-based models including T5, SQL-BART, and SMBOP, the application incorporates schema-aware preprocessing, dynamic schema linking, and fine-tuning on the Spider dataset to improve SQL generation accuracy and cross-domain generalization.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">NLP</span>
+              <span class="stack-tag">Transformers</span>
+              <span class="stack-tag">T5</span>
+              <span class="stack-tag">PyTorch</span>
+              <span class="stack-tag">Text-to-SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="project-title">Gene Semantic Bridge</div>
+          </div>
+          <div class="flip-back">
+            <div class="project-title">Gene Semantic Bridge</div>
+            <p class="project-desc">Knowledge-augmented deep learning framework that predicts single-cell gene expression responses to CRISPR perturbations. Built using a Conditional Variational Autoencoder (CVAE) and BioBERT, the model combines semantic gene embeddings with learned representations to improve accuracy and generalization across unseen perturbation conditions, outperforming baseline methods.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">PyTorch</span>
+              <span class="stack-tag">BioBERT</span>
+              <span class="stack-tag">Deep Learning</span>
+              <span class="stack-tag">Generative AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card reveal">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="project-title">Multimodal Emotion Detection</div>
+          </div>
+          <div class="flip-back">
+            <div class="project-title">Multimodal Emotion Detection</div>
+            <p class="project-desc">Multimodal deep learning system that recognizes human emotions by combining text, audio, and video information. Built using BERT, HuBERT, EfficientNet, and multimodal fusion techniques, the system improves emotion recognition performance through weighted late fusion, achieving 60% classification accuracy on the MELD dataset.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">BERT</span>
+              <span class="stack-tag">HuBERT</span>
+              <span class="stack-tag">EfficientNet</span>
+              <span class="stack-tag">Multimodal AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+ 
+  </section>
+
+  <!-- ── PUBLICATIONS ───────────────────────────────────────── -->
+  <section id="publications">
+    <p class="section-label reveal">Research</p>
+    <h2 class="section-title reveal">My <span>Publication</span></h2>
+    <div class="pub-card reveal">
+      <div class="pub-title">Gesture Controlled Virtual Mouse with Voice Assistant</div>
+      <div class="pub-journal">International Research Journal of Multidisciplinary Scope (IRJMS) · Vol 5, Issue 1 · January 2024</div>
+      <div class="pub-desc">Designed and published an AI-powered gesture-controlled virtual mouse with voice assistant that combines computer vision and speech recognition for touch-free human-computer interaction. The proposed system achieved 98% gesture recognition accuracy and demonstrates an accessible alternative to traditional input devices.</div>
+      <div class="pub-tags">
+        <span class="stack-tag">Computer Vision</span>
+        <span class="stack-tag">Speech Recognition</span>
+        <span class="stack-tag">OpenCV</span>
+        <span class="stack-tag">MediaPipe</span>
+        <span class="stack-tag">Human-Computer Interaction</span>
+      </div>
+      <a href="https://www.irjms.com/wp-content/uploads/2024/01/Manuscript_IRJMS_0127_WS.pdf" target="_blank" class="btn btn-primary" style="width: fit-content; font-size: 0.8rem; padding: 0.4rem 1rem; display: inline-flex; align-items: center; border-radius: 20px; min-width: 130px; justify-content: center; margin-top: 1rem;">
+        View Paper
+      </a>
+    </div>
+  </section>
+
+
+
+  <!-- ── CONTACT ────────────────────────────────────────────── -->
+  <section id="contact">
+    <p class="section-label reveal">Let's Connect</p>
+    <h2 class="section-title reveal">Get in <span>Touch</span></h2>
+    <div class="reveal">
+      <p class="contact-sub">Looking forward to connecting with people who are passionate about technology, innovation, and building impactful solutions..</p>
+      <div class="contact-links">
+        <a href="mailto:sbharamb@usc.edu" class="contact-btn">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+        <a href="https://linkedin.com/in/sakshi-bharambe" target="_blank" class="contact-btn">
+          <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+        </a>
+        <!-- <a href="#" target="_blank" class="contact-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <!-- <footer>
+    <div class="footer-name">Sakshi Bharambe</div>
+    <div class="footer-tagline">MS CS @ USC &nbsp;·&nbsp; Los Angeles, CA</div>
+    <div class="footer-divider"></div>
+    <div class="footer-socials">
+      <a href="mailto:sbharamb@usc.edu"                aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/sakshi-bharambe" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"                                        target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Sakshi Bharambe. Designed &amp; built with ♥</div>
+  </footer> -->
+
+  <footer>
+    <div class="footer-copy">© 2026 Sakshi Bharambe</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
